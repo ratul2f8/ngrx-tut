@@ -1,0 +1,13 @@
+<div style="display: flex;flex-grow: 1;justify-content:space-around;align-items: center;flex-direction: column;">
+  <app-header></app-header>
+  <div class="mb-3 mt-3">
+    <form (submit)="onHandleSubmit($event)">
+      <label for="search" class="form-label">Search</label>
+    <input type="text"  class="form-control" [value]="searchTerm" (input)="onSearchValue($event)"/>
+    </form>
+  </div>
+  <p>You entered : {{searchTerm}}</p>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+

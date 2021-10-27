@@ -1,0 +1,9 @@
+<ng-container>
+  <app-loading-bar *ngIf="loading"></app-loading-bar>
+  <h2 style="color: brown" *ngIf="errorMessage.length !== 0">
+    {{ errorMessage }}
+  </h2>
+  <p>
+    {{products | json }}
+  </p>
+</ng-container>
